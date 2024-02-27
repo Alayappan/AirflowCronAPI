@@ -1,4 +1,8 @@
-# Steps to Run Airflow instance
+Here we have created a cron worker, this will check PG table once a day for active priorities P1 and post it to the API.
+
+we have used Airflow for running the worker as cron, configured the DB config and API url in Airflow connections and Variable respectively.
+
+## Steps to Run Airflow instance
 - create .env file with below content.
 
 ```
