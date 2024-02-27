@@ -6,4 +6,4 @@
 
 - run container 
 
-``` docker run --rm -it -p 8000:8000/tcp hellofastapiws:latest ```
+``` docker run --rm  -p 8000:8000/tcp hellofastapiws:latest ```
