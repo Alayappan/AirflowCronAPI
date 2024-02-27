@@ -67,6 +67,7 @@ and configure the connection params
  VALUES ('p1', True) RETURNING *;
 ```
 ## create a simple API receives a payload and post it back.
+check this simple API created for this cron, https://github.com/Alayappan/AirflowCronAPI/tree/fast-api 
 ## configure the URL in Airflow variable
 ![image](https://github.com/Alayappan/AirflowCronAPI/assets/38777845/c7207c0e-9ab5-4068-911f-76286d0e33eb)
 
