@@ -17,9 +17,10 @@ calculate the cost for each resource that has a frequency greater than the speci
 2. Navigate to the project directory
 3. Install poetry: `pip install poetry`
 4. Run to install dependencies `poetry install`
+5. create .env file as .env.sample
 
 ## Usage
-1. Run the application: `poetry run python -m uvicorn main:app --reload --host 0.0.0.0 --port 8080`
+1. Run the application: `poetry run python -m uvicorn main:app --reload --host 0.0.0.0 --port 8080 --env-file .env`
 2. Open your browser and go to `http://localhost:8000/docs`
 
 
@@ -28,7 +29,7 @@ calculate the cost for each resource that has a frequency greater than the speci
 
 ```
 curl -X 'GET' \
-  'http://localhost:8080/frequentResourceCost?percent=1&unit_cost=1' \
+  'http://localhost:8080/frequentResourceCost?percent=0.9&unit_cost=1' \
   -H 'accept: application/json'
 ```
 

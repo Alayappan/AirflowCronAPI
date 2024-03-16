@@ -7,6 +7,7 @@ from sql_module import models
 from sql_module import schemas
 from sql_module.database import SessionLocal, engine
 
+from config import settings
 
 models.Base.metadata.create_all(bind=engine)
 
