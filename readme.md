@@ -26,11 +26,10 @@ calculate the cost for each resource that has a frequency greater than the speci
 
 
 
----
-
+```
 curl -X 'GET' \
   'http://localhost:8080/frequentResourceCost?percent=1&unit_cost=1' \
   -H 'accept: application/json'
+```
 
----
 
