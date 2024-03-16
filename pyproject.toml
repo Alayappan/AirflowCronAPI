@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "percentiledata"
+version = "0.1.0"
+description = ""
+authors = ["Alayappan <kamalesh@ngpwebsmart.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pip = "^24.0"
+sqlalchemy = "^2.0.28"
+psycopg2 = "^2.9.9"
+fastapi = {extras = ["full"], version = "^0.110.0"}
+uvicorn = "^0.27.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
