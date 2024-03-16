@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     PG_DATABASE:str
     PG_HOST:str
     PG_PORT:int
+    PG_TABLE:str
 
 
     class Config:

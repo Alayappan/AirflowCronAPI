@@ -37,10 +37,10 @@ def get_resources_with_cost(db: Session, skip: int = 0, limit: int = 100, unit_c
     
     return {'total_cost':total_cost, 'resources':resources}
 
-def get_resource_cost(db: Session, unit_cost:float = 1.0, percent:float=1.0):
+def get_resource_cost(db: Session, unit_cost:float = 1.0, percent:float=1.0, table=''):
     try:
         # Execute the raw SQL query
-        sql_query = text("""
+        sql_query = text(f"""
             WITH RankedUsers AS (
                 SELECT
                     account_id,
@@ -48,7 +48,7 @@ def get_resource_cost(db: Session, unit_cost:float = 1.0, percent:float=1.0):
                     resource_id,
                     region,
                     COUNT(account_id) AS Count
-                FROM public.resource_with_duplicate
+                FROM {table}
                 GROUP BY account_id, resource_type, resource_id, region ORDER BY COUNT(account_id) DESC
             )
             SELECT
